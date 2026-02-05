@@ -28,8 +28,10 @@ app.use(pinoHttp({
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.get('/healthcheck', (req, res) => {
-  res.status(200)
-  res.send('OK')
+  res.status(200).json({
+  狀態: '成功',
+  訊息: '確定'
+})
 })
 app.use('/api/credit-package', creditPackageRouter)
 app.use('/api/coaches/skill', skillRouter)

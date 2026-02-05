@@ -1,3 +1,14 @@
+/**
+ * 堂數方案資料表
+ *
+ * 位元欄說明：
+ * - id: 方案編號（UUID）
+ * - 名稱：方案名稱
+ * - Credit_amount: 包含堂數
+ * - 價格: 方案價格
+ * - 建立時間：建立時間
+ */
+
 const { EntitySchema } = require('typeorm')
 
 module.exports = new EntitySchema({
